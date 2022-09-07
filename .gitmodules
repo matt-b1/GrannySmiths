@@ -1,0 +1,3 @@
+[submodule "blog_project_client"]
+	path = blog_project_client
+	url = git@github.com:karldudley/blog_project_client.git
