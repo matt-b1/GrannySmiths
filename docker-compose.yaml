@@ -1,0 +1,22 @@
+version: '3'
+services:
+  client:
+    image: node:16.15.0
+    ports:
+      - 8080:8080
+    volumes:
+      - type: bind
+        source: ./blog_project_client
+        target: /code
+    working_dir: /code
+    command: bash -c "npm install && npm run dev"
+  api:
+    image: node:16.15.0
+    ports:
+      - 3000:3000
+    volumes:
+      - type: bind
+        source: ./blog_project_server
+        target: /code
+    working_dir: /code
+    command: bash -c "npm install && npm run dev"
